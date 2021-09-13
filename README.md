@@ -1,1 +1,1 @@
-# Weatherprediction using Amazon Sagemaker built-in models
+# weather prediction using Amazon Sagemaker built-in models
