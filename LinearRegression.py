@@ -93,27 +93,6 @@ pd.DataFrame({'actual':test_y,
              'prediction':prediction,
              'diff':(test_y-prediction)})
 
-#**************************************************************************************************
-
-##Using Polynomial Regression
-
-from sklearn.preprocessing import PolynomialFeatures
-
-poly = PolynomialFeatures(degree = 4)
-
-X_poly = poly.fit_transform(train_x)
-poly.fit(X_poly, train_y)
-
-lin2 = LinearRegression()
-lin2.fit(X_poly, train_y)
-prediction2 = lin2.predict(poly.fit_transform(test_x))
-
-## Calculating the error
-np.mean((prediction2-test_y)**2)
-
-pd.DataFrame({'actual':test_y,
-             'prediction':prediction2,
-             'diff':(test_y-prediction2)})
 
 #**************************************************************************************************
 
